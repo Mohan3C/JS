@@ -108,7 +108,7 @@
 
 
 // console.log(admin["v"]()) // same here if we want to access the function inside the key, we have to use Parenthesis"()".
-
+//  admin["v"] is a reference and "()" is excution. 
 
 
 // assign, merging , joining in Objects
@@ -137,12 +137,88 @@
 
 
 
-const varab = {
-    course: "JavaScript",
-    price: 999,
-    Instructor : "Mohan"
+// const varab = {
+//     course: "JavaScript",
+//     price: 999,
+//     Instructor : "Mohan"
+// }
+
+// const { Instructor : inst} = varab  // This is de-structure syntax = const {Key:rename(optional)} = Object
+
+// console.log(inst);
+
+
+
+// difference between "===" and "=="
+
+// let num1 = "5";
+
+// if (num1 === 5) {           // "===" is checking the value and datatype, where "==" is checking only value.
+//     console.log("False")
+// }
+
+// if (num1 == 5) {
+//     console.log("True")
+// }
+
+
+
+
+// Function
+
+// function greet(user = "Guest") {        /// "' ="Guest" '" is default value
+//     console.log(`Good Morning, ${user}`)
+// }
+
+// greet  // this is only reference, but if we want to execute the function then we have to use "()"
+
+
+// greet("mohan")
+
+
+
+// function one() {
+//     const username = "Mohan";
+
+//     function two() {
+//         const website = "youtube"
+
+//         console.log(username);
+        
+//         return website
+//     }
+    
+//     const fun= two()
+
+//     console.log(fun);
+// }
+
+// one()
+
+
+
+// IIFE - Immediately Invoked Function Expression("()()")
+
+
+// (function one() {
+//     const username = "Mohan";
+//     console.log(username)
+// })();               // We have to use ";" for end the function 
+
+// 1. IIFE is a function which immediately executes after it's creation . It is wriiten as one parentheses for wrapping the function and other for execution ()();
+// 2. Variables defined inside an IIFE are not accessible from outside its scope which helps to avoid conflicts with other variables or functions (global scope pollution). Means IIFE keeps variables and functions private in it.
+// 3. IIFE written with function name is named IIFE and not with name are unnamed/anonymous. 
+// 4.We can use parameter inside first parentheses.
+// 5. To write two or multiple IIFE one should be end with semicolon ;
+
+
+
+
+// array
+
+
+const myArray = [1, 2, 3, 4, 5, 6, 6]
+
+for (const key of myArray) {
+    console.log(key);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 }
-
-const { Instructor : inst} = varab  // This is de-structure syntax = const {Key:rename(optional)} = Object
-
-console.log(inst);
