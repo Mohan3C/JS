@@ -217,8 +217,33 @@
 // array
 
 
-const myArray = [1, 2, 3, 4, 5, 6, 6]
+// const myArray = [1, 2, 3, 4, 5, 6, 6]
 
-for (const key of myArray) {
-    console.log(key);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+// for (const key of myArray) {   // If "in" is used instead "of" in the loop , it will give Index
+//      console.log(key);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+// }
+
+
+//  Map 
+
+
+const map = new Map()
+
+map.set("In", "India")
+map.set("Fr", "France")
+map.set("Br", "Brazil")
+
+for (const [key,value] of map) {   // We use [] to seprate the key and value, we can use normal loop. But that will retun key and value in the array format.
+    console.log(`${key} = ${value}`)
 }
+
+
+
+// Nullish Coalescing Operator (??): 
+
+
+// let i;
+
+// i = null ?? 10
+
+// console.log(i)
