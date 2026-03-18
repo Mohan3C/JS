@@ -9,33 +9,65 @@
 
 
     <div>
-        <ul>
+        <ul id="image">
             <li>
-                <img width="300px" src="https://images.pexels.com/photos/36508552/pexels-photo-36508552.jpeg" alt="Pisa evening walk">
+                <img width="300" id="flower" src="https://images.pexels.com/photos/36508552/pexels-photo-36508552.jpeg" alt="Pisa evening walk">
             </li>
             <li>
-                <img width="200px" src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4" alt="Living room interior">
+                <img width="200" src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4" alt="Living room interior">
             </li>
             <li>
-                <img width="200px" src="https://images.pexels.com/photos/36589583/pexels-photo-36589583.jpeg" alt="Basketball at dusk">
+                <img width="200" src="https://images.pexels.com/photos/36589583/pexels-photo-36589583.jpeg" alt="Basketball at dusk">
             </li>
             <li>
-                <img  width="200px" src="https://images.pexels.com/photos/33678099/pexels-photo-33678099.jpeg" alt="Venetian canal at dusk">
+                <img  width="200" src="https://images.pexels.com/photos/33678099/pexels-photo-33678099.jpeg" alt="Venetian canal at dusk">
             </li>
             <li>
-                <img width="200px" src="https://images.pexels.com/photos/34441629/pexels-photo-34441629.jpeg" alt="Sunflower close-up">
+                <img width="200" id="#" src="https://images.pexels.com/photos/34441629/pexels-photo-34441629.jpeg" alt="Sunflower close-up">
             </li>
             <li>
-                <img width="200px" src="https://images.pexels.com/photos/36520337/pexels-photo-36520337.jpeg" alt="Warm sunset street">
+                <img width="200" src="https://images.pexels.com/photos/36520337/pexels-photo-36520337.jpeg" alt="Warm sunset street">
             </li>
             <li>
-                <img width="200px" src="https://images.pexels.com/photos/36534892/pexels-photo-36534892.jpeg" alt="Tree branches silhouette">
+                <img width="200" src="https://images.pexels.com/photos/36534892/pexels-photo-36534892.jpeg" alt="Tree branches silhouette">
             </li>
             <li>
-                <img width="200px" src="https://images.pexels.com/photos/36399072/pexels-photo-36399072.jpeg" alt="Zurich facade">
+                <img width="200" src="https://images.pexels.com/photos/36399072/pexels-photo-36399072.jpeg" alt="Zurich facade">
+            </li>
+            <li>
+                <a href="google.com" id="google">Google</a>
             </li>
         </ul>
     </div>
-    
+    <script>
+        // document.getElementById('image').addEventListener('click',function(f){
+        //     console.log(f);
+        //     ; 
+        // },false);
+
+        // document.getElementById('flower').addEventListener('click',function(e){
+        //     alert("Why did you click on flower")
+        //     e.stopPropagation()
+        // },false)
+        
+
+        // document.getElementById('google').addEventListener('click',function(e){
+        //     alert("Why did you click on it")
+        //     e.preventDefault()
+        //     e.stopPropagation()
+        // },false)
+
+        document.querySelector('#image').addEventListener('click',function(e){
+            console.log(e.target.tagName)
+
+            if (e.target.tagName === 'IMG'){
+                console.log(e.target.id);
+                let removeObject = e.target.parentNode;
+                removeObject.remove()
+            }
+
+        },false)
+        
+    </script>
 </body>
 </html>
