@@ -1,7 +1,7 @@
 // const { readFileSync } = require("node:fs");
 
-// console.log("Learning JS — no excuses");
-// console.log('Hello');
+console.log("Learning JS — no excuses");
+console.log('Hello');
 
 // const name = "chaman";
 // const age = 25;
@@ -227,15 +227,15 @@
 //  Map 
 
 
-const map = new Map()
+// const map = new Map()
 
-map.set("In", "India")
-map.set("Fr", "France")
-map.set("Br", "Brazil")
+// map.set("In", "India")
+// map.set("Fr", "France")
+// map.set("Br", "Brazil")
 
-for (const [key,value] of map) {   // We use [] to seprate the key and value, we can use normal loop. But that will retun key and value in the array format.
-    console.log(`${key} = ${value}`)
-}
+// for (const [key,value] of map) {   // We use [] to seprate the key and value, we can use normal loop. But that will retun key and value in the array format.
+//     console.log(`${key} = ${value}`)
+// }
 
 
 
