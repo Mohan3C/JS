@@ -4,37 +4,74 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        .primary {
-            color: #fea928;
+        :root {
+            --primary: #ffd18b;
+            --secondary: #ed8900;
         }
 
-        .secondary {
-            color: #ed8900;
+        body {
+            font-family: 'Outfit', sans-serif;
         }
 
-        .custom_color {
-            color: #ffcb7d;
-            background-color: #f6d097;
+        .bg-primary {
+            background-color: var(--primary);
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .nav-link {
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .search-container {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+
+        .search-container.active {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(254, 169, 40, 0.2);
+            width: 300px !important;
         }
     </style>
 </head>
 
-<body id="body">
-    <div class="container">
-        <header class="m-0 items-center flex custom_color justify-between px-10 py-2">
+<body>
+    <div class="container min-h-screen ">
+        <header class="m-0 items-center flex bg-primary justify-between px-10 py-2">
             <div class="flex ">
                 <img src="photos/shopsy/logo.png" alt="logo" class="size-10">
             </div>
 
-            <div class="text-black flex items-center bg-red-500 ">
-                <span id="healer" class="nav">Healer</span>
-                <div class="bg-green-500 rounded-full flex px-4 py-1 ">
-                    <input type="text" id="input_area" name="" placeholder="Search" class="focus:outline-none ">
-                    <button class="flex" id="search">
+            <div id="search-container" class="text-black flex items-center rounded-full ">
+                <div class="rounded-full flex px-4 py-1 cursor-pointer">
+                    <input type="text" id="input_area" name="" placeholder="Search" class="focus:outline-none hidden">
+                    <button class="flex cursor-pointer" id="search">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6 text-gray-400" >
+                            stroke="currentColor" class="size-6 text-gray-500">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
@@ -48,17 +85,34 @@
     <script>
         const search_btn = document.getElementById("search");
         const input_area = document.getElementById("input_area");
-        const clickarea = document.querySelector("#body");
+        const container = document.getElementById("search-container");
 
-        // search_btn.addEventListener("click",() => {
+        // search_btn.addEventListener("click", (e) => {
+        //     e.stopPropagation();
         //     input_area.classList.toggle("hidden");
         //     input_area.focus();
         // });
 
-        clickarea.addEventListener("click",()=>{
-            if(!input_area.classList.contains("hidden")){
-                input_area.classList.toggle("hidden");
+        search_btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if(input_area.classList.contains("hidden")){
+                input_area.classList.remove("hidden")
+                container.classList.add("active","bg-white");
+                input_area.focus();
+            }
+            else{
+                container.classList.remove("bg-white")
+                input_area.classList.add("hidden")
             };
+        });
+
+
+        document.addEventListener("click", (e) => {
+            if (!container.contains(e.target)) {
+                input_area.classList.add("hidden");
+                container.classList.remove("bg-white","active")
+                
+            }
         });
 
     </script>
