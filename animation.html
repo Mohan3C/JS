@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JS</title>
+    <style>
+        * {
+            margin: 0;
+            
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh
+        }
+
+        .outer {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(109, 143, 156);
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .inner{
+            position:absolute;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border: 3px solid ;
+            border-radius: 4px;
+            border-color: rgb(0, 213, 255);
+            animation: ani 2s ease-in infinite;
+        }   
+
+        @keyframes ani {
+            /* from {
+                transform: translatex(80vw) scale(1);
+            } */
+            to{
+                transform: translate(60vw);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner">
+
+        </div>
+
+    </div>
+</body>
+
+</html>
