@@ -8,9 +8,10 @@
     <style>
         * {
             margin: 0;
-            
+
         }
-        body{
+
+        body {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -26,26 +27,38 @@
             justify-content: center;
             display: flex;
         }
-        .inner{
-            position:absolute;
+
+        .inner {
+            position: absolute;
             width: 100px;
             height: 100px;
             background-color: aqua;
             /* border: 3px solid ;
             border-radius: 4px; */
             /* border-color: rgb(0, 213, 255); */
-            animation: ani 2s ease-in infinite;
-        }   
+            /* animation: ani 2s ease-in infinite; */
+            /* transform: translateX(400px); */
+            transition: background-color 1s ease, transform 1s ease;
 
-        @keyframes ani {
-            /* from {
-                transform: translatex(80vw) scale(1);
-            } */
-            to{
-                transform: translate(60vw);
-            }
+
         }
 
+        .inner:hover {
+            /* animation: 1s ease ani; */
+            /* transition: translate(200px); */
+            /* transform: translate(200px); */
+            transform: translate(300px);
+            background-color: rgb(0, 221, 255);
+        }
+
+        /* @keyframes ani {
+
+            to {
+                transform: translate(200px);
+                background-color: rgb(0, 221, 255);
+
+            }
+        } */
     </style>
 </head>
 
