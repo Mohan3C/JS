@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-height: 100vh;
+            max-width: 100vw;
+            background-image: url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg);
+
+            /* background-color: rgba(193, 217, 226, 0.901); */
+        }
+
+        .box {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .card {
+            position: absolute;
+            display: flex;
+            width: 80vw;
+            height: 80vh;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+
+        .card1 {
+            height: 520px;
+            width: 300px;
+            /* border-radius: 8px; */
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            width: 300px;
+            /* border-top-left-radius: 8px;
+            border-top-right-radius: 8px; */
+        }
+
+        .text-field {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            word-break: break-all;
+
+        }
+
+        .text-field h2 {
+            padding-bottom: 20px;
+
+        }
+        .wrap{
+            margin-top: auto;
+            /* border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px; */
+        }
+
+        .bot {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 60px;
+            color: white;
+            width: 300px;
+        }
+
+        .view {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            padding: 0 20px 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .time,
+        .com {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .s1 {
+            color: rgb(255, 101, 50);
+        }
+
+        .s2 {
+            color: rgb(255, 70, 150);
+        }
+
+        .s3 {
+            color: rgb(46, 211, 0);
+        }
+
+        .b2{
+            background-color: rgb(255, 70, 150);
+        }
+        .b1{
+            background-color: rgb(255, 101, 50);
+        }
+        .b3{
+            background-color: rgb(46, 211, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <div class="card">
+            <div class="card1">
+                <div class="ig">
+                    <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality.jpg"
+                        alt="photo">
+                </div>
+                <div class="text-field">
+                    <span class="s1">1 month ago</span>
+                    <h2>Post One</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nihil aliquid dolore modi
+                        esse, repellendus assumenda sint blanditiis nobis repellat, id voluptatem? Quibusdam, ea quia.
+                        Placeat quisquam modi soluta. Consequatur.</p>
+                </div>
+                <div class="wrap b1">
+                    <div class="bot">
+                        <div class="time">
+                            <h4>4 m</h4>
+                            <h4>READ</h4>
+                        </div>
+                        <div class="view">
+                            <h4>5123</h4>
+                            <h4>Views</h4>
+                        </div>
+                        <div class="com">
+                            <h4>32</h4>
+                            <h4>Comments</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="ig">
+                    <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality.jpg"
+                        alt="photo">
+                </div>
+                <div class="text-field">
+                    <span class="s2">2 weeks ago</span>
+                    <h2>Post Two</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nihil aliquid dolore modi
+                        esse, repellendus assumenda sint blanditiis nobis repellat, id voluptatem? Quibusdam, ea quia.
+                        Placeat quisquam modi soluta. Consequatur.</p>
+                </div>
+                <div class="wrap b2">
+                    <div class="bot">
+                        <div class="time">
+                            <h4>4 m</h4>
+                            <h4>READ</h4>
+                        </div>
+                        <div class="view">
+                            <h4>5123</h4>
+                            <h4>Views</h4>
+                        </div>
+                        <div class="com">
+                            <h4>32</h4>
+                            <h4>Comments</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="ig">
+                    <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality.jpg"
+                        alt="photo">
+                </div>
+                <div class="text-field">
+                    <span class="s3">4 days ago</span>
+                    <h2>Post Three</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nihil aliquid dolore modi
+                        esse, repellendus assumenda sint blanditiis nobis repellat, id voluptatem? Quibusdam, ea quia.
+                        Placeat quisquam modi soluta. Consequatur.</p>
+                </div>
+                <div class="wrap b3">
+                    <div class="bot">
+                        <div class="time">
+                            <h4>4 m</h4>
+                            <h4>READ</h4>
+                        </div>
+                        <div class="view">
+                            <h4>5123</h4>
+                            <h4>Views</h4>
+                        </div>
+                        <div class="com">
+                            <h4>32</h4>
+                            <h4>Comments</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
